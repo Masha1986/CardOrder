@@ -38,7 +38,7 @@ public class CardOrderTest {
 
     @Test
     public void shouldSendForm() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Пушкин Сергей");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Константин Войтенко");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+71231525664");
         driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__box")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -58,7 +58,7 @@ public class CardOrderTest {
 
     @Test
     public void shouldShowErrorWhenNameIsIncorrect() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Пушкин Сергей");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Konstantin Voytenko");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+71231525664");
         driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__box")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -68,7 +68,7 @@ public class CardOrderTest {
 
     @Test
     public void shouldShowErrorWhenPhoneIsEmpty() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Пушкин Сергей");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Константин Войтенко");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("");
         driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__box")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -78,7 +78,7 @@ public class CardOrderTest {
 
     @Test
     public void shouldShowErrorWhenPhoneIsIncorrect() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Пушкин Сергей");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Константин Войтенко");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("asgah");
         driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__box")).click();
         driver.findElement(By.cssSelector("button")).click();
@@ -88,7 +88,7 @@ public class CardOrderTest {
 
     @Test
     public void shouldShowErrorWhenCheckboxInactive() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Пушкин Сергей");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Константин Войтенко");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79855456336");
         driver.findElement(By.cssSelector("button")).click();
         assertTrue(driver.findElement(By.cssSelector(".input_invalid>.checkbox__box")).isDisplayed());
